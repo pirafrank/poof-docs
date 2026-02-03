@@ -1,0 +1,72 @@
+---
+sidebar_position: 1
+sidebar_label: Installation
+title: How to Install poof
+description: Installation instructions for poof on Linux and macOS
+---
+
+# How to Install poof
+
+Multiple installation methods are supported. Choose the one you prefer.
+
+## Stable Release
+
+### Quick one-liner
+
+Automatically downloads the right pre-built binary for your OS and architecture.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/pirafrank/poof/main/install.sh | sh
+```
+
+It will install `poof` in `${HOME}/.local/bin`.
+
+### Pre-built binary
+
+Download the binary from [latest release](https://github.com/pirafrank/poof/releases), and move it to some directory in your `$PATH`.
+
+:::note
+poof is a single binary with no additional dependencies. You can download and run it straight away.
+:::
+
+### cargo binstall
+
+If you have [binstall](https://github.com/cargo-bins/cargo-binstall), you can get the binary using `cargo` and skip compilation:
+
+```sh
+cargo binstall poof
+```
+
+### cargo
+
+Build and install latest release on crates.io using `cargo`:
+
+```sh
+cargo install --locked poof
+```
+
+### From source
+
+Build and install from tags in source code on GitHub:
+
+```sh
+cargo install --locked --git https://github.com/pirafrank/poof --tag VERSION
+```
+
+:::important
+Replace `VERSION` with the desired version to install. Not specifying a tag will install from `main` branch. Read section below for more info.
+:::
+
+## Edge Release
+
+Build and install from source code on `main` branch on GitHub.
+
+The `main` branch should be considered stable. Yet it may contain unreleased software with bugs or breaking changes not yet documented in [CHANGELOG.md](https://github.com/pirafrank/poof/blob/main/CHANGELOG.md). It should be considered release-candidate quality software.
+
+```sh
+cargo install --locked --git https://github.com/pirafrank/poof
+```
+
+## Next Steps
+
+After installation, proceed to [configure your shell](./shell-configuration.md) to add poof to your PATH.
