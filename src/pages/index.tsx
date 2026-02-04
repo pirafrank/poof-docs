@@ -62,7 +62,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/getting-started/installation">
+            to="/docs/installation">
             Get Started
           </Link>
           <Link
@@ -238,7 +238,7 @@ function QuickExample() {
         <div className="text--center margin-top--xl">
           <Link
             className="button button--primary button--lg"
-            to="/docs/getting-started/installation">
+            to="/docs/installation">
             Start using poof →
           </Link>
         </div>

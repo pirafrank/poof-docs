@@ -17,7 +17,7 @@ description: Understanding where poof stores its data
 Inside, you'll find:
 
 - `data`, for installed versioned binaries. It follows the `USERNAME/REPONAME/VERSION/` directory structure to store executables for that version of the installed binary
-- `bin`, where are symlinks to current version [in use](../getting-started/usage.md) of each binary
+- `bin`, where are symlinks to current version [in use](./usage.md) of each binary
 
 Below, an example of the structure you may usually find:
 
@@ -48,7 +48,7 @@ Having a dedicated directory for `poof` binaries is a good practice, as it allow
 
 - keep them separate from other software installed on your system
 - keep them separate from paths you may manually edit (like `~/.local/bin`)
-- easily temporarily disable `poof` by removing the directory from your `$PATH` (see [Disable](../features/disable.md))
+- easily temporarily disable `poof` by removing the directory from your `$PATH` (see [Disable](./disable.md))
 
 :::important
 Be sure it is at the beginning of your `$PATH` so that it takes precedence over any other version of the same binary you may have installed other ways.

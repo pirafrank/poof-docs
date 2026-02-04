@@ -22,9 +22,9 @@ const sidebars: SidebarsConfig = {
       label: 'Getting Started',
       collapsed: false,
       items: [
-        'getting-started/installation',
-        'getting-started/shell-configuration',
-        'getting-started/usage',
+        'installation',
+        'shell-configuration',
+        'usage',
       ],
     },
     {
@@ -32,9 +32,9 @@ const sidebars: SidebarsConfig = {
       label: 'Features',
       collapsed: false,
       items: [
-        'features/features',
-        'features/shell-completions',
-        'features/disable',
+        'features',
+        'shell-completions',
+        'disable',
       ],
     },
     {
@@ -42,17 +42,17 @@ const sidebars: SidebarsConfig = {
       label: 'Concepts',
       collapsed: false,
       items: [
-        'concepts/overview',
-        'concepts/data-storage',
-        'concepts/versioning-policy',
+        'concepts',
+        'data-storage',
+        'versioning-policy',
       ],
     },
     {
       type: 'category',
       label: 'Maintenance',
       items: [
-        'maintenance/uninstall',
-        'maintenance/migrations',
+        'uninstall',
+        'migrations',
       ],
     },
     'roadmap',
@@ -62,8 +62,8 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Contribute',
       items: [
-        'contributing/how-to',
-        'contributing/development-guide',
+        'contribute',
+        'development-guide',
       ],
     },
   ],

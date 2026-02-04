@@ -24,9 +24,9 @@ You just run `poof install someuser/somerepo` and... *poof!* it is installed and
 
 ## Quick Links
 
-- [Installation Guide](./getting-started/installation.md)
-- [Usage Guide](./getting-started/usage.md)
-- [Features Overview](./features/features.md)
+- [Installation Guide](./installation.md)
+- [Usage Guide](./usage.md)
+- [Features Overview](./features.md)
 - [GitHub Repository](https://github.com/pirafrank/poof)
 
 Thank you for using poof!

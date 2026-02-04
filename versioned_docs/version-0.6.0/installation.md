@@ -91,7 +91,7 @@ cargo binstall poof
 
 ### From crates.io
 
-Build and install latest release on crates.io using `cargo`:
+Build and install the latest release from [crates.io](https://crates.io/crates/poof) using `cargo`:
 
 ```sh
 cargo install --locked poof

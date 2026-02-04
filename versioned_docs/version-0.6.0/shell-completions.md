@@ -272,5 +272,5 @@ If completions aren't working in Bash, you may need to install bash-completion:
 ## See Also
 
 - [poof README](https://github.com/pirafrank/poof/tree/main/README.md) - Main project documentation
-- [Configure your shell](../getting-started/shell-configuration.md) - Guide for adding poof to your PATH
+- [Configure your shell](./shell-configuration.md) - Guide for adding poof to your PATH
 - Shell-specific documentation (linked throughout this guide)

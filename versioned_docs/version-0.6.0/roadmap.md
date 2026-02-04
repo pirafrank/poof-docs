@@ -12,7 +12,7 @@ This document outlines both implemented and planned features for *poof*. This fi
 
 Items are listed in no particular order. The list is not final and may change over time.
 
-Currently supported commands are always defined in the [Usage](./getting-started/usage.md) section.
+Currently supported commands are always defined in the [Usage](./usage.md) section.
 
 Got a feature request? Open an [issue](https://github.com/pirafrank/poof/labels/feature%20request).
 

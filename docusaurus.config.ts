@@ -105,7 +105,7 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/getting-started/installation',
+              to: '/docs/installation',
             },
             {
               label: 'Features',
@@ -113,7 +113,7 @@ const config: Config = {
             },
             {
               label: 'Contributing',
-              to: '/docs/contributing/how-to',
+              to: '/docs/contribute',
             },
           ],
         },
