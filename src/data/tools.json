@@ -1,0 +1,194 @@
+[
+  {
+    "icon": "🔍",
+    "repo": "BurntSushi/ripgrep"
+  },
+  {
+    "icon": "🎯",
+    "repo": "acheronfail/repgrep"
+  },
+  {
+    "icon": "🎬",
+    "repo": "asciinema/asciinema"
+  },
+  {
+    "icon": "🎞️",
+    "repo": "asciinema/agg"
+  },
+  {
+    "icon": "📺",
+    "repo": "alexpasmantier/television"
+  },
+  {
+    "icon": "💾",
+    "repo": "ayungavis/rudu"
+  },
+  {
+    "icon": "⚙️",
+    "repo": "bytecodealliance/wasmtime"
+  },
+  {
+    "icon": "🧊",
+    "repo": "charmbracelet/freeze"
+  },
+  {
+    "icon": "✨",
+    "repo": "charmbracelet/glow"
+  },
+  {
+    "icon": "🔄",
+    "repo": "CycloneDX/cyclonedx-cli"
+  },
+  {
+    "icon": "🌊",
+    "repo": "dandavison/delta"
+  },
+  {
+    "icon": "📂",
+    "repo": "direnv/direnv"
+  },
+  {
+    "icon": "🌳",
+    "repo": "extrawurst/gitui"
+  },
+  {
+    "icon": "📋",
+    "repo": "eza-community/eza"
+  },
+  {
+    "icon": "🗂️",
+    "repo": "gokcehan/lf"
+  },
+  {
+    "icon": "📝",
+    "repo": "helix-editor/helix"
+  },
+  {
+    "icon": "🦥",
+    "repo": "jesseduffield/lazygit"
+  },
+  {
+    "icon": "🐳",
+    "repo": "jesseduffield/lazydocker"
+  },
+  {
+    "icon": "🌲",
+    "repo": "chmouel/lazyworktree"
+  },
+  {
+    "icon": "🔒",
+    "repo": "karol-broda/snitch"
+  },
+  {
+    "icon": "🔧",
+    "repo": "ms-jpq/sad"
+  },
+  {
+    "icon": "☀️",
+    "repo": "pomdtr/sunbeam"
+  },
+  {
+    "icon": "🌐",
+    "repo": "pranshuparmar/witr"
+  },
+  {
+    "icon": "🔍",
+    "repo": "sharkdp/fd"
+  },
+  {
+    "icon": "⚡",
+    "repo": "sinelaw/fresh"
+  },
+  {
+    "icon": "🚫",
+    "repo": "sondr3/git-ignore"
+  },
+  {
+    "icon": "🚢",
+    "repo": "stern/stern"
+  },
+  {
+    "icon": "📁",
+    "repo": "sxyazi/yazi"
+  },
+  {
+    "icon": "🔀",
+    "repo": "Wilfred/difftastic"
+  },
+  {
+    "icon": "💿",
+    "repo": "lsd-rs/lsd"
+  },
+  {
+    "icon": "💾",
+    "repo": "muesli/duf"
+  },
+  {
+    "icon": "🧹",
+    "repo": "bootandy/dust"
+  },
+  {
+    "icon": "🔥",
+    "repo": "hatoo/oha"
+  },
+  {
+    "icon": "📊",
+    "repo": "ClementTsang/bottom"
+  },
+  {
+    "icon": "⚙️",
+    "repo": "dalance/procs"
+  },
+  {
+    "icon": "🐶",
+    "repo": "mr-karan/doggo"
+  },
+  {
+    "icon": "👁️",
+    "repo": "watchexec/watchexec"
+  },
+  {
+    "icon": "🌳",
+    "repo": "solidiquis/erdtree"
+  },
+  {
+    "icon": "⛏️",
+    "repo": "unfrl/dug"
+  },
+  {
+    "icon": "💬",
+    "repo": "agavra/tuicr"
+  },
+  {
+    "icon": "🔌",
+    "repo": "unkn0wn-root/resterm"
+  },
+  {
+    "icon": "⬇️",
+    "repo": "surge-downloader/surge"
+  },
+  {
+    "icon": "📂",
+    "repo": "filebrowser/filebrowser"
+  },
+  {
+    "icon": "🔑",
+    "repo": "bitwarden/sdk-sm"
+  },
+  {
+    "icon": "💿",
+    "repo": "Byron/dua-cli"
+  },
+  {
+    "icon": "📊",
+    "repo": "shshemi/tabiew"
+  },
+  {
+    "icon": "☸️",
+    "repo": "ahmetb/kubectx"
+  },
+  {
+    "icon": "📱",
+    "repo": "blacktop/ipsw"
+  }
+]

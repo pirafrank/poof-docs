@@ -52,6 +52,7 @@ Poof automatically detects your system configuration and selects the right binar
 - **Multi-binary assets**: Detects and handles complex assets with multiple executables inside (e.g., `sxyazi/yazi`)
 - **Mono-repos**: Use tag pattern matching to isolate a specific release in mono-repos or repositories with mixed release types (e.g., `bitwarden/sdk-sm -t bws-v1.0.0`).
 - **Non-semantic versions**: Works with tools that don't follow Semantic Versioning (e.g., `gokcehan/lf`).
+- **Musl automatic fallback**: Adapts and fallbacks to musl when Glibc is not available on the machine, or when a static build is the only available option (e.g., `Byron/dua-cli`)
 
 #### Intelligent Matching
 
