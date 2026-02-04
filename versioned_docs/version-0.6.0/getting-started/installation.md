@@ -25,9 +25,61 @@ It will install `poof` in `${HOME}/.local/bin`.
 
 Download the binary from [latest release](https://github.com/pirafrank/poof/releases), and move it to some directory in your `$PATH`.
 
-:::note
-poof is a single binary with no additional dependencies. You can download and run it straight away.
-:::
+### Homebrew
+
+Install poof using [Homebrew](https://brew.sh) on macOS or Linux:
+
+```sh
+brew tap pirafrank/tap
+brew install pirafrank/tap/poof
+```
+
+### AUR
+
+Arch Linux users can install poof from the [AUR](https://aur.archlinux.org/packages/poof-bin) using an helpers like `yay` or `paru`:
+
+```sh
+yay -S poof-bin
+```
+
+or
+
+```sh
+paru -S poof-bin
+```
+
+Alternatively, install it manually:
+
+```sh
+git clone https://aur.archlinux.org/poof-bin.git
+cd poof-bin
+makepkg -si
+```
+
+### asdf
+
+Install poof using the [asdf version manager](https://asdf-vm.com):
+
+```sh
+# Add the poof plugin
+asdf plugin add poof https://github.com/pirafrank/asdf-poof.git
+
+# Install latest version
+asdf install poof latest
+```
+
+On asdf 0.16+ use:
+
+```sh
+# Set as global version
+asdf set --home poof latest
+```
+On asdf 0.15 and earlier use:
+
+```sh
+# Set as global version
+asdf global poof latest
+```
 
 ### cargo binstall
 
@@ -37,7 +89,7 @@ If you have [binstall](https://github.com/cargo-bins/cargo-binstall), you can ge
 cargo binstall poof
 ```
 
-### cargo
+### From crates.io
 
 Build and install latest release on crates.io using `cargo`:
 
