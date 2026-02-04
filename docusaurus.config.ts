@@ -71,7 +71,7 @@ const config: Config = {
     image: 'img/poof-social-card.png',
     colorMode: {
       defaultMode: 'dark',
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'poof',
