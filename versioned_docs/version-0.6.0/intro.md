@@ -6,8 +6,6 @@ description: Official documentation for poof - magic manager of pre-built softwa
 
 # Welcome to poof
 
-![poof logo](/img/logo.png)
-
 This documentation serves as your comprehensive guide to **poof**, the magic manager of pre-built software.
 
 ## What is poof?

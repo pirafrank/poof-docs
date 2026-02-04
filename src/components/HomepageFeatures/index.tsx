@@ -5,48 +5,78 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  emoji: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Zero Everything',
+    emoji: '🚀',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <strong>Zero-config</strong>, <strong>zero-install</strong>, and <strong>zero-dependencies</strong>.
+        One self-contained binary that works out of the box. No YAML, no TOML, no setup required.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Smart Asset Selection',
+    emoji: '🧠',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Automatically detects your OS, architecture, and libc to download the right binary.
+        Supports multi-tool releases, mono-repos, and handles 10+ archive formats with magic number validation.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Version Management',
+    emoji: '🔄',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Install multiple versions side-by-side and switch between them instantly with <code>poof use</code>.
+        Update all installed tools with a single command.
+      </>
+    ),
+  },
+  {
+    title: 'User-Space First',
+    emoji: '👤',
+    description: (
+      <>
+        Designed to work in user-space and be portable. No root access needed.
+        XDG-compliant directory structure keeps your system clean and organized.
+      </>
+    ),
+  },
+  {
+    title: 'Cross-Platform',
+    emoji: '🌍',
+    description: (
+      <>
+        Works on Linux and macOS. Supports 8 architectures on Linux, both Intel and Apple Silicon on macOS.
+        Native shell integration for bash, zsh, fish, elvish, nushell, powershell, and xonsh.
+      </>
+    ),
+  },
+  {
+    title: 'Fast & Safe',
+    emoji: '⚡',
+    description: (
+      <>
+        Written in Rust for speed and safety. Built on reliable dependencies with linting
+        and formatting applied at commit time. Helpful error messages guide you when things go wrong.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, emoji, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.featureEmoji}>{emoji}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
