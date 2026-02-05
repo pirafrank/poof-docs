@@ -1,12 +1,10 @@
 ---
 sidebar_label: Usage
-title: Using poof
+title: Usage
 description: Basic usage guide for poof commands
 ---
 
-# Using poof
-
-## Let's install something!
+## Let's install something
 
 If you already have `poof` available in your shell, try installing something.
 
@@ -64,6 +62,10 @@ If you encounter any issues, please report them at:
 https://github.com/pirafrank/poof/issues
 ```
 
+:::tip Skip prompts
+Use the `-y` flag to avoid interactive prompts. Good for scripts and CI/CD pipelines.
+:::
+
 ## Examples
 
 ### Install a binary
@@ -84,6 +86,18 @@ poof install <USER>/<REPO> -t <TAG>
 poof list
 ```
 
+### Which repository provides `sometool` in $PATH?
+
+```sh
+poof which sometool
+```
+
+### What binaries are provided by an installed repository?
+
+```sh
+poof what <USER>/<REPO>
+```
+
 ### Update an installed binary
 
 ```sh
@@ -96,13 +110,44 @@ poof update <USER>/<REPO>
 poof update --all
 ```
 
-### Switch between versions of a binary
+:::tip Performance
+Updates are performed in parallel for better performance when updating multiple tools.
+:::
+
+### Uninstall a specific version
+
+```sh
+poof uninstall <USER>/<REPO> -v <VERSION>
+```
+
+### Uninstall all versions of a repository
+
+```sh
+poof uninstall <USER>/<REPO> --all
+```
+
+### Skip confirmation prompts
+
+Add `-y` flag to skip confirmation prompts (useful for scripts and CI/CD):
+
+```sh
+poof uninstall <USER>/<REPO> --all -y
+poof unlink sometool -y
+```
+
+### Remove binary `sometool` from $PATH
+
+```sh
+poof unlink sometool
+```
+
+### Switch between versions of a binary (or re-enable after `unlink`)
 
 ```sh
 poof use <USER>/<REPO> version
 ```
 
-### Check if poof is in $PATH
+### Check if poof `bin` directory is in $PATH
 
 ```sh
 poof check
@@ -119,3 +164,9 @@ poof info
 For more information, visit: [https://github.com/pirafrank/poof](https://github.com/pirafrank/poof)
 
 If you encounter any issues, please report them at: [https://github.com/pirafrank/poof/issues](https://github.com/pirafrank/poof/issues)
+
+## Next Steps
+
+- **[Environment Variables](./environment-variables.md)** - Configure poof behavior using environment variables
+- **[Advanced Usage](./advanced-usage.md)** - Learn about advanced features and power-user tips
+- **[Features](./features.md)** - Explore all of poof's capabilities in detail

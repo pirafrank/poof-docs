@@ -56,9 +56,11 @@ Poof automatically detects your system configuration and selects the right binar
 
 #### Intelligent Matching
 
-- Fuzzy matching for repository names catches typos and suggests corrections
-- Asset filtering prioritizes your exact platform over generic releases
-- Automatic extraction of nested binaries from complex archive structures
+- **Scoring algorithm**: Uses a point-based system to evaluate and select the best asset for your platform (see [Advanced Usage](./advanced-usage.md#asset-selection-algorithm) for details)
+- **Fuzzy matching**: Catches typos in repository names and suggests corrections
+- **Asset filtering**: Prioritizes your exact platform over generic releases
+- **Automatic extraction**: Handles nested binaries from complex archive structures
+- **Checksum filtering**: Automatically excludes checksum files (.sha256, .sha1, .md5) from installation
 
 ### 📦 Comprehensive Archive Support
 
@@ -76,7 +78,7 @@ Poof handles 10+ archive formats with robust validation:
 
 **Features:**
 
-- **Magic number validation**: Verifies actual file type regardless of extension
+- **Magic number validation**: Verifies actual file type by reading magic bytes (file signatures), not just extensions - prevents format spoofing and corruption issues
 - **Streaming extraction**: Efficient memory usage even for large archives
 - **Nested archive support**: Handles archives within archives
 - **Compression detection**: Automatically applies the right decompression algorithm
@@ -104,15 +106,22 @@ poof list
 - Pin specific versions for reproducible builds
 - Quickly rollback if a new version has issues
 - No need to uninstall before installing another version
+- Automatic duplicate detection prevents re-downloading already installed versions
 
 ### 🧹 Clean Management
 
 Poof follows the XDG Base Directory Specification for organized, predictable storage:
 
-```
+```text
 ~/.local/share/poof/     # Installed binaries and metadata
 ~/.cache/poof/           # Downloaded archives and temporary files
 ```
+
+**Automatic maintenance:**
+
+- Cache auto-cleanup after successful installations
+- Broken symlink detection and removal during uninstalls
+- Organized directory structure with clear separation of data and cache
 
 ### 🔍 Helpful Error Handling
 
@@ -147,10 +156,23 @@ Every error message includes:
 
 Native support for 7 popular shells with completions and PATH setup.
 
+**Supported shells:** bash, zsh, fish, elvish, nushell (nu), powershell (pwsh), xonsh
+
+**Features:**
+
 - Tab completions for all commands and flags
 - One-command PATH configuration: `poof enable --shell bash` (or your shell)
 - Generate init scripts: `poof init --shell zsh`
 - Persistent completions that survive shell restarts
+
+### ⚡ Performance
+
+Poof is designed for speed and efficiency:
+
+- **Parallel operations**: Multi-threaded directory traversal in `list` command
+- **Parallel updates**: When using `update --all`, tools are updated concurrently
+- **Cached detection**: Platform and libc detection results are cached to avoid repeated system calls
+- **Efficient extraction**: Streaming archive extraction minimizes memory usage
 
 ## Core Philosophy
 
@@ -172,7 +194,7 @@ Poof works out of the box with sensible defaults:
 - Smart defaults based on XDG Base Directory Specification
 - Works immediately after installation
 
-**When you need it:** Environment variables allow customization of paths without config files.
+**When you need it:** [Environment variables](./environment-variables.md) allow customization without config files.
 
 ### 📦 Zero-Install
 

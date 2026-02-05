@@ -18,7 +18,10 @@
       "collapsed": false,
       "items": [
         "features",
+        "rate-limiting",
+        "environment-variables",
         "shell-completions",
+        "advanced-usage",
         "disable"
       ]
     },
@@ -29,20 +32,15 @@
       "items": [
         "concepts",
         "data-storage",
+        "how-it-works",
         "versioning-policy"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Maintenance",
-      "items": [
-        "uninstall",
-        "migrations"
       ]
     },
     "roadmap",
     "project-goals",
+    "migrations",
     "support",
+    "uninstall",
     {
       "type": "category",
       "label": "Contribute",

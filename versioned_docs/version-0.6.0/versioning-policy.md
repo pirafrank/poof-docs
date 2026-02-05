@@ -13,7 +13,7 @@ The following versioning approach allows users to track feature growth and stabi
 
 ## Major
 
-Unlike traditional semantic versioning, the fixed `0` major version is not a placeholder for an eventual `1.0`, but an indication that there is an effort to provide stability yet it is not guaranteed across versions. Users should treat every new release—minor or patch—as potentially incompatible, and always consult release notes before upgrading.
+Unlike traditional semantic versioning, the fixed `0` major version is not a placeholder for an eventual `1.0`, but an indication that there is an effort to provide stability yet it is not guaranteed across versions. Users should treat every new release: minor or patch: as potentially incompatible, and always consult release notes before upgrading.
 
 ## Minor
 

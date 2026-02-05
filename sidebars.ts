@@ -33,7 +33,11 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'features',
+        'rate-limiting',
+        'environment-variables',
         'shell-completions',
+        'advanced-usage',
+        'debug-logs',
         'disable',
       ],
     },
@@ -44,20 +48,15 @@ const sidebars: SidebarsConfig = {
       items: [
         'concepts',
         'data-storage',
+        'how-it-works',
         'versioning-policy',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Maintenance',
-      items: [
-        'uninstall',
-        'migrations',
       ],
     },
     'roadmap',
     'project-goals',
+    'migrations',
     'support',
+    'uninstall',
     {
       type: 'category',
       label: 'Contribute',

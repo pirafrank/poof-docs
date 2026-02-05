@@ -27,6 +27,8 @@ You just run `poof install someuser/somerepo` and... *poof!* it is installed and
 - [Installation Guide](./installation.md)
 - [Usage Guide](./usage.md)
 - [Features Overview](./features.md)
+- [Environment Variables](./environment-variables.md) - Configure poof behavior
+- [Advanced Usage](./advanced-usage.md) - Power-user tips and internal details
 - [GitHub Repository](https://github.com/pirafrank/poof)
 
 Thank you for using poof!

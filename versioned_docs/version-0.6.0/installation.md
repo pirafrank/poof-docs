@@ -23,7 +23,7 @@ It will install `poof` in `${HOME}/.local/bin`.
 
 ### Pre-built binary
 
-Download the binary from [latest release](https://github.com/pirafrank/poof/releases), and move it to some directory in your `$PATH`.
+Download the binary from [latest release](https://github.com/pirafrank/poof/releases/latest), and move it to some directory in your `$PATH`.
 
 ### Homebrew
 
