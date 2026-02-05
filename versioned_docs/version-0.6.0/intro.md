@@ -4,13 +4,13 @@ title: Welcome to poof
 description: Official documentation for poof - magic manager of pre-built software
 ---
 
-# Welcome to poof
-
 This documentation serves as your comprehensive guide to **poof**, the magic manager of pre-built software.
 
-## What is poof?
+## What is it?
 
-**poof** is an easy-to-use all-in-one binary with zero-config, zero-install, and zero-dependencies that helps you manage pre-built software binaries from GitHub releases.
+**poof** is a modern binary manager that makes installing and managing command-line tools effortless. Whether you're setting up a new machine or managing tools across multiple environments, poof provides a streamlined, user-friendly experience without the complexity of traditional package managers.
+
+Unlike traditional package managers that struggle to keep pace with the rapid release cycle of modern TUI and CLI tools, poof gives you access to the latest versions as soon as they are released. If it's published on GitHub Releases, poof can install it. No waiting for manifests, formulae, ports, or repositories to be created or updated.
 
 You just run `poof install someuser/somerepo` and... *poof!* it is installed and available in your shell.
 

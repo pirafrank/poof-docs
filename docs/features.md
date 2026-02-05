@@ -7,7 +7,7 @@ description: What makes poof different
 
 ## Overview
 
-Poof is a modern binary manager that makes installing and managing command-line tools effortless. Whether you're setting up a new machine or managing tools across multiple environments, poof provides a streamlined, user-friendly experience without the complexity of traditional package managers.
+This page provides a comprehensive overview of poof's capabilities, exploring both its practical features and the design principles.
 
 ## Core Features
 
@@ -99,6 +99,7 @@ poof list
 ```
 
 **Benefits:**
+
 - Test compatibility with different tool versions
 - Pin specific versions for reproducible builds
 - Quickly rollback if a new version has issues
@@ -136,6 +137,7 @@ warn: A binary named 'tool' already exists in PATH
 #### Context in Errors
 
 Every error message includes:
+
 - What went wrong
 - Why it happened
 - Suggested next steps
@@ -151,6 +153,15 @@ Native support for 7 popular shells with completions and PATH setup.
 - Persistent completions that survive shell restarts
 
 ## Core Philosophy
+
+### 📃 Zero-Maintenance
+
+Poof eliminates the traditional dependency on package managers:
+
+- **No waiting for users**: Users can install tools directly from GitHub releases without waiting for package maintainers to update formulas, recipes, or package definitions
+- **Stress-free for maintainers**: Software authors don't need to explicitly support yet another package manager, or add it to their release process: if it's on GitHub Releases, poof can install it
+- **Self-service**: Users can immediately access new releases as soon as authors publish them
+- **No gatekeepers**: No need to submit PRs to package repositories or wait for approval from maintainers
 
 ### 🛠️ Zero-Config
 
@@ -173,6 +184,7 @@ Poof itself is a single, self-contained binary:
 - Uninstall by simply removing the binary: `rm $(which poof)`
 
 **Benefits:**
+
 - Fast setup on new machines
 - Easy to distribute in CI/CD
 - No version conflicts or dependency hell

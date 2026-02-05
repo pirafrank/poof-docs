@@ -27,7 +27,7 @@ export default function QuickExample(): ReactNode {
     return array.slice(0, count);
   };
 
-  const [displayedTools] = useState(() => getRandomTools(tools, 24));
+  const [displayedTools] = useState(() => getRandomTools(tools, 12));
 
   const handleToolClick = async (repo: string) => {
     try {
@@ -68,12 +68,12 @@ export default function QuickExample(): ReactNode {
           <div className={styles.exampleCard}>
             <div className={styles.cardHeader}>
               <span className={styles.cardNumber}>2</span>
-              <h3>Add to PATH</h3>
+              <h3>Enable it</h3>
             </div>
             <div className={styles.cardCode}>
               <code>poof enable</code>
             </div>
-            <p className={styles.cardDescription}>Configure your shell automatically</p>
+            <p className={styles.cardDescription}>Automatically add poof's directory to PATH</p>
           </div>
 
           <div className={styles.exampleCard}>
@@ -112,8 +112,11 @@ export default function QuickExample(): ReactNode {
             ))}
           </div>
           <div className={styles.showcaseFooter}>
-            <p>Install any of these with <code className={styles.inlineCode}>poof install user/repo</code></p>
-            <p>Click on a tool to copy the install command to your clipboard.</p>
+            <p>
+              Click on a tool to copy the install command to clipboard.
+              <br/>
+              Tools are randomly selected. Get back later to see more.
+            </p>
           </div>
         </div>
 

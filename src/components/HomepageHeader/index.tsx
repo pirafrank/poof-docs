@@ -55,7 +55,9 @@ export default function HomepageHeader(): ReactNode {
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <p className={styles.heroDescription}>
-          Easy-to-use all-in-one binary with zero-config, zero-install, and zero-dependencies.
+          Easy-to-use package manager in one-binary. No manifests, formulae, or repositories required.
+          <br/>
+          Zero-config, zero-install, and zero-dependencies.
         </p>
         <div className={styles.buttons}>
           <Link
