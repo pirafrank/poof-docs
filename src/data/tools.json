@@ -84,10 +84,6 @@
     "repo": "ms-jpq/sad"
   },
   {
-    "icon": "☀️",
-    "repo": "pomdtr/sunbeam"
-  },
-  {
     "icon": "🌐",
     "repo": "pranshuparmar/witr"
   },
@@ -190,5 +186,133 @@
   {
     "icon": "📱",
     "repo": "blacktop/ipsw"
+  },
+  {
+    "icon": "📈",
+    "repo": "achannarasappa/ticker"
+  },
+  {
+    "icon": "🔐",
+    "repo": "FiloSottile/age"
+  },
+  {
+    "icon": "💾",
+    "repo": "gobackup/gobackup"
+  },
+  {
+    "icon": "🔬",
+    "repo": "hengyoush/kyanos"
+  },
+  {
+    "icon": "📁",
+    "repo": "veeso/termscp"
+  },
+  {
+    "icon": "📖",
+    "repo": "unhappychoice/gitlogue"
+  },
+  {
+    "icon": "⚡",
+    "repo": "jordond/jolt"
+  },
+  {
+    "icon": "🛠️",
+    "repo": "isd-project/isd"
+  },
+  {
+    "icon": "📰",
+    "repo": "christo-auer/eilmeldung"
+  },
+  {
+    "icon": "🏛️",
+    "repo": "govctl-org/govctl"
+  },
+  {
+    "icon": "📊",
+    "repo": "1jehuang/mermaid-rs-renderer"
+  },
+  {
+    "icon": "🤖",
+    "repo": "tjblackheart/andcli"
+  },
+  {
+    "icon": "🔑",
+    "repo": "Adembc/lazyssh"
+  },
+  {
+    "icon": "🖥️",
+    "repo": "Gaurav-Gosain/tuios"
+  },
+  {
+    "icon": "📄",
+    "repo": "bgreenwell/doxx"
+  },
+  {
+    "icon": "🔍",
+    "repo": "kiki-ki/go-qo"
+  },
+  {
+    "icon": "🧠",
+    "repo": "lasantosr/intelli-shell"
+  },
+  {
+    "icon": "🔤",
+    "repo": "abhimanyu003/sttr"
+  },
+  {
+    "icon": "🔥",
+    "repo": "YS-L/flamelens"
+  },
+  {
+    "icon": "🐱",
+    "repo": "Skardyy/mcat"
+  },
+  {
+    "icon": "⚙️",
+    "repo": "serkanyersen/dotstate"
+  },
+  {
+    "icon": "🕷️",
+    "repo": "edoardottt/cariddi"
+  },
+  {
+    "icon": "🔌",
+    "repo": "Macmod/godap"
+  },
+  {
+    "icon": "📝",
+    "repo": "timkicker/podliner"
+  },
+  {
+    "icon": "📡",
+    "repo": "kristoferlund/ostt"
+  },
+  {
+    "icon": "✉️",
+    "repo": "reacherhq/check-if-email-exists"
+  },
+  {
+    "icon": "🌪️",
+    "repo": "Harry-kp/vortix"
+  },
+  {
+    "icon": "🔧",
+    "repo": "j178/prek"
+  },
+  {
+    "icon": "📦",
+    "repo": "tarka/xcp"
+  },
+  {
+    "icon": "📋",
+    "repo": "11happy/cpx"
+  },
+  {
+    "icon": "🌐",
+    "repo": "rbas/roxy"
+  },
+  {
+    "icon": "🎥",
+    "repo": "charmbracelet/vhs"
   }
 ]
