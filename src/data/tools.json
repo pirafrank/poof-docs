@@ -314,5 +314,9 @@
   {
     "icon": "🎥",
     "repo": "charmbracelet/vhs"
+  },
+  {
+    "icon": "👋",
+    "repo": "ramonvermeulen/whosthere"
   }
 ]
