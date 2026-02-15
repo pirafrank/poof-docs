@@ -151,6 +151,14 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  scripts: [
+    {
+      src: 'https://static.cloudflareinsights.com/beacon.min.js',
+      defer: true,
+      'data-cf-beacon': '{"token": "1252d79a69b24191a73fbc537ad60774"}',
+    },
+  ],
 };
 
 export default config;
