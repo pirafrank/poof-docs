@@ -134,5 +134,5 @@ Then attach `debug.log` when creating your GitHub issue.
 ## Related Documentation
 
 - [Environment Variables](./environment-variables.md) - All available environment variables
-- [Advanced Usage](./advanced-usage.md#troubleshooting-asset-selection) - Troubleshooting guide
+- [Advanced Usage](./advanced-usage.md) - Troubleshooting guide
 - [Support](./support.md) - Get help and report issues

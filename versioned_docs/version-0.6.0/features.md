@@ -56,7 +56,7 @@ Poof automatically detects your system configuration and selects the right binar
 
 #### Intelligent Matching
 
-- **Scoring algorithm**: Uses a point-based system to evaluate and select the best asset for your platform (see [Advanced Usage](./advanced-usage.md#asset-selection-algorithm) for details)
+- **Scoring algorithm**: Uses a point-based system to evaluate and select the best asset for your platform
 - **Fuzzy matching**: Catches typos in repository names and suggests corrections
 - **Asset filtering**: Prioritizes your exact platform over generic releases
 - **Automatic extraction**: Handles nested binaries from complex archive structures
