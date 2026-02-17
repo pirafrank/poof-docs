@@ -322,5 +322,21 @@
   {
     "icon": "🦀",
     "repo": "sipeed/picoclaw"
+  },
+  {
+    "icon": "🧠",
+    "repo": "yashksaini-coder/oracle"
+  },
+  {
+    "icon": "📘",
+    "repo": "tealdeer-rs/tealdeer"
+  },
+  {
+    "icon": "📊",
+    "repo": "xxxserxxx/gotop"
+  },
+  {
+    "icon": "🔍",
+    "repo": "sharkdp/bat"
   }
 ]
