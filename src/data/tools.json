@@ -338,5 +338,21 @@
   {
     "icon": "🔍",
     "repo": "sharkdp/bat"
+  },
+  {
+    "icon": "✅",
+    "repo": "rvben/rumdl"
+  },
+  {
+    "icon": "🐳",
+    "repo": "oras-project/oras"
+  },
+  {
+    "icon": "📰",
+    "repo": "ricardodantas/perch"
+  },
+  {
+    "icon": "🖥️",
+    "repo": "devnullvoid/pvetui"
   }
 ]
