@@ -56,7 +56,7 @@ npm run serve
 
 ## Project Structure
 
-```
+```txt
 poof-docs/
 ├── docs/                      # Documentation files
 │   ├── getting-started/       # Installation and setup guides
