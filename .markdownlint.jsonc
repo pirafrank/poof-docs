@@ -1,0 +1,6 @@
+{
+    // long lines in tables
+    "MD013": { "tables": false, "code_blocks": false },
+    // tables
+    "MD060": false
+}

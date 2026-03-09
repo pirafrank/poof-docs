@@ -7,6 +7,11 @@ description: Installation instructions for poof on Linux and macOS
 
 Multiple installation methods are supported. Choose the one you prefer.
 
+:::tip
+Check the *Continuous Integration* and *Containerization* pages
+for more ways to install and deploy `poof`.
+:::
+
 ## Stable Release
 
 ### Quick one-liner
@@ -17,11 +22,14 @@ Automatically downloads the right pre-built binary for your OS and architecture.
 curl -fsSL https://raw.githubusercontent.com/pirafrank/poof/main/install.sh | sh
 ```
 
-It will install `poof` in `${HOME}/.local/bin`.
+It will install `poof` in `${HOME}/.local/bin` on both Linux and macOS.
+Be sure such directory is in `$PATH`.
 
 ### Pre-built binaries
 
-Download the binary for your OS and CPU from [latest release](https://github.com/pirafrank/poof/releases/latest), and move it to some directory in your `$PATH`.
+Download the binary for your OS and CPU from
+[latest release](https://github.com/pirafrank/poof/releases/latest), and move it
+to some directory in your `$PATH`.
 
 ### Homebrew
 
@@ -68,11 +76,10 @@ On Red-Hat and Amazon Linux distributions can also install using YUM or DNF.
 
 **Supported distributions:**
 
-- Fedora 24 and newer
-- RHEL 8 / CentOS 8 / CentOS Stream 8
-- RHEL 9 / CentOS Stream 9
-- Amazon Linux 2
+- RHEL 9 / CentOS Stream 9 / Fedora 36 and newer
+- RHEL 8 / CentOS 8 / CentOS Stream 8 / Fedora (from 24 to 35)
 - Amazon Linux 2023
+- Amazon Linux 2
 
 <details>
 <summary>RHEL 9 / CentOS Stream 9 / Fedora 36 and newer</summary>
@@ -148,7 +155,9 @@ sudo yum install poof
 
 ### Arch Linux (AUR)
 
-Arch Linux users can also install poof from the [AUR](https://aur.archlinux.org/packages/poof-bin) using an helpers like `yay` or `paru`:
+Arch Linux users can also install poof from the
+[AUR](https://aur.archlinux.org/packages/poof-bin) using an helpers
+like `yay` or `paru`:
 
 ```sh
 yay -S poof-bin
@@ -181,7 +190,9 @@ On Alpine Linux you can also install via APK.
 
 **Supported versions:**
 
-We support the latest four stable Alpine in the repository.
+:::info
+We support the last four stable Alpine versions.
+:::
 
 - Alpine 3.23
 - Alpine 3.22
@@ -229,7 +240,8 @@ asdf global poof latest
 
 ### cargo binstall
 
-If you have [binstall](https://github.com/cargo-bins/cargo-binstall), you can get the binary using `cargo` and skip compilation:
+If you have [binstall](https://github.com/cargo-bins/cargo-binstall), you can
+get the binary using `cargo` and skip compilation:
 
 ```sh
 cargo binstall poof
@@ -237,7 +249,8 @@ cargo binstall poof
 
 ### From crates.io
 
-Build and install the latest release from [crates.io](https://crates.io/crates/poof) using `cargo`:
+Build and install the latest release from [crates.io](https://crates.io/crates/poof)
+using `cargo`:
 
 ```sh
 cargo install --locked poof
@@ -252,14 +265,21 @@ cargo install --locked --git https://github.com/pirafrank/poof --tag VERSION
 ```
 
 :::important
-Replace `VERSION` with the desired version to install. Not specifying a tag will install from `main` branch. Read section below for more info.
+Replace `VERSION` with the desired version to install. Not specifying a tag will
+install from `main` branch. Read section below for more info.
 :::
 
 ## Edge Release
 
 Build and install from source code on `main` branch on GitHub.
 
-The `main` branch should be considered stable. Yet it may contain unreleased software with bugs or breaking changes not yet documented in [CHANGELOG.md](https://github.com/pirafrank/poof/blob/main/CHANGELOG.md). It should be considered release-candidate quality software.
+:::warning
+While the `main` branch may be considered stable, it may ship unreleased
+software with bugs or breaking changes not yet documented here or in
+[CHANGELOG.md](https://github.com/pirafrank/poof/blob/main/CHANGELOG.md).
+
+**It should be considered beta quality software.**
+:::
 
 ```sh
 cargo install --locked --git https://github.com/pirafrank/poof
@@ -267,4 +287,5 @@ cargo install --locked --git https://github.com/pirafrank/poof
 
 ## Next Steps
 
-After installation, proceed to [configure your shell](./shell-configuration.md) to add poof to your PATH.
+After installation, proceed to [configure your shell](./shell-configuration.md)
+to add poof to your PATH.

@@ -70,6 +70,36 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: 'CI Integration',
+    emoji: '🔧',
+    description: (
+      <>
+        First-class support for CI/CD pipelines. Install and cache tools in GitHub Actions,
+        GitLab CI, and other runners (via Docker) without extra tools.
+      </>
+    ),
+  },
+  {
+    title: 'Package Managers',
+    emoji: '📦',
+    description: (
+      <>
+        Available on Homebrew, APT, YUM/DNF, AUR, asdf, and more. Install poof the way you prefer and
+        keep it up to date through your existing package manager workflow.
+      </>
+    ),
+  },
+  {
+    title: 'Devcontainer Feature',
+    emoji: '🐳',
+    description: (
+      <>
+        Ready-to-use Devcontainer feature for instant setup in GitHub Codespaces.
+        Get poof and all your tools pre-installed in every container automatically.
+      </>
+    ),
+  },
 ];
 
 function Feature({title, emoji, description}: FeatureItem) {

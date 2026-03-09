@@ -44,7 +44,7 @@ export default function QuickExample(): ReactNode {
     <section className={styles.exampleSection}>
       <div className="container" id="install">
         <div className={styles.exampleHeader}>
-          <span className={styles.exampleEmoji}>⚡</span>
+          <span className={styles.exampleEmoji}>✔️</span>
           <Heading as="h2" className="text--center">
             Install any GitHub release in seconds
           </Heading>

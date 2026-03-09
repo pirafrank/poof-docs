@@ -42,6 +42,25 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+      "type": "category",
+      "label": "Continuous Integration",
+      "collapsed": false,
+      "items": [
+        "github",
+        "gitlab",
+        "scripting"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Containerization",
+      "collapsed": false,
+      "items": [
+        "docker",
+        "devcontainer"
+      ]
+    },
+    {
       type: 'category',
       label: 'Concepts',
       collapsed: false,
