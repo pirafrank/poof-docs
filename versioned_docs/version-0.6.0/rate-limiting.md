@@ -5,8 +5,6 @@ title: GitHub Rate Limiting
 description: Understanding GitHub API rate limits and how to configure authentication
 ---
 
-# GitHub Rate Limiting
-
 ## Overview
 
 When you use `poof` to install software from GitHub repositories, it makes API calls to GitHub to fetch release information. GitHub applies rate limits to these API requests to ensure fair usage of their services.
@@ -29,7 +27,7 @@ The token is used:
 - When downloading release information from GitHub repositories
 - When making any GitHub API calls during the installation process
 
-No configuration is needed—simply set the `GITHUB_TOKEN` environment variable, and poof will automatically use it.
+No configuration is needed-simply set the `GITHUB_TOKEN` environment variable, and poof will automatically use it.
 
 ## Setting the Environment Variable
 
