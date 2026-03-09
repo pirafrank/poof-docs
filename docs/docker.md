@@ -9,7 +9,7 @@ A Docker image of `poof` is available on [Docker Hub](https://hub.docker.com/r/p
 
 It is [based on Alpine Linux](https://github.com/pirafrank/poof/blob/main/Dockerfile#L3)
 and built automatically on every stable release via a GitHub Action
-[workflow](.github/workflows/docker.yml).
+[workflow](https://github.com/pirafrank/poof/tree/main/.github/workflows/docker.yml).
 
 ## Supported architectures
 
