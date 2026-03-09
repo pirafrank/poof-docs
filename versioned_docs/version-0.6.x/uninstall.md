@@ -80,7 +80,8 @@ asdf uninstall poof
 
 ## Installed via cargo
 
-If you have installed it using any of the `cargo` commands (including `cargo binstall`), you can uninstall it with:
+If you have installed it using any of the `cargo` commands (including `cargo binstall`),
+you can uninstall it with:
 
 ```sh
 cargo uninstall poof
@@ -93,4 +94,6 @@ After you uninstall `poof`, you should:
 - remove its `bin` directory from your `$PATH`
 - delete its [data and cache](./data-storage.md) directories as well
 
-Sorry to see you go! Please [provide feedback](https://github.com/pirafrank/poof/issues/new/choose) about what went wrong.
+Sorry to see you go! Please
+[provide feedback](https://github.com/pirafrank/poof/issues/new/choose)
+about what went wrong.

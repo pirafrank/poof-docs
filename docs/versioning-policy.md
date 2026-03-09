@@ -5,8 +5,6 @@ title: Versioning Policy
 description: Understanding poof's versioning scheme
 ---
 
-# Versioning Policy
-
 poof adopts a [0ver](https://0ver.org/) versioning scheme, where the major version is permanently set to `0`, following the `0.x.y` convention.
 
 The following versioning approach allows users to track feature growth and stability expectations, while enabling the tool to evolve flexibly during its early lifecycle.

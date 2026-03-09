@@ -4,8 +4,6 @@ title: Project Goals
 description: What poof aims to achieve and what it doesn't
 ---
 
-# Project Goals
-
 What the development is focused on.
 
 Poof is built upon the UNIX philosophy of _do one thing and do it well_. The development focus remains strictly on adhering to this principle, ensuring the tool delivers focused, reliable functionality without introducing unnecessary complexity or features better handled by other tools.

@@ -5,8 +5,6 @@ title: Migrations (Deprecated)
 description: Migration guides for older poof versions
 ---
 
-# Migrations
-
 :::warning Deprecated
 For old versions only!
 Poof should be stable enough not to need more migrations in the foreseeable future.

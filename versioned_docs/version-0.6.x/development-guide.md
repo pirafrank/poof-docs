@@ -5,8 +5,6 @@ title: Development Guide
 description: Guide for developers working on poof
 ---
 
-# Development Guide
-
 ## Dev platforms
 
 The following platforms are supported to develop *poof* on:

@@ -5,8 +5,6 @@ title: Configure Your Shell
 description: Guide to configure your shell to use poof
 ---
 
-# Configure Your Shell
-
 After installing poof, it's necessary to add its `bin` directory to `$PATH`.
 
 ## Automatically

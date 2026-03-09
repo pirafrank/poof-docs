@@ -5,18 +5,22 @@ title: Where Data is Stored
 description: Understanding where poof stores its data
 ---
 
-# Where Data is Stored
+This page describes where `poof` stores its data, cache, and configuration
+on your system.
 
 ## Data
 
-`poof` stores its data in standard directories via the [dirs](https://crates.io/crates/dirs) crate. Specifically, its data root is in:
+`poof` stores its data in standard directories via the
+[dirs](https://crates.io/crates/dirs) crate. Specifically, its data root is in:
 
 - **Linux**: `~/.local/share/poof`
 - **macOS**: `~/Library/Application Support/poof`
 
 Inside, you'll find:
 
-- `data`, for installed versioned binaries. It follows the `USERNAME/REPONAME/VERSION/` directory structure to store executables for that version of the installed binary
+- `data`, for installed versioned binaries. It follows the
+  `USERNAME/REPONAME/VERSION/` directory structure to store executables for
+  that version of the installed binary
 - `bin`, where are symlinks to current version [in use](./usage.md) of each binary
 
 Below, an example of the structure you may usually find:
@@ -42,16 +46,20 @@ Below, an example of the structure you may usually find:
 
 ## About poof's `bin` directory
 
-After installing `poof`, you add its `bin` directory to your `$PATH` via `poof enable` command.
+After installing `poof`, you add its `bin` directory to your `$PATH` via
+`poof enable` command.
 
-Having a dedicated directory for `poof` binaries is a good practice, as it allows you to:
+Having a dedicated directory for `poof` binaries is a good practice, as
+it allows you to:
 
 - keep them separate from other software installed on your system
 - keep them separate from paths you may manually edit (like `~/.local/bin`)
-- easily temporarily disable `poof` by removing the directory from your `$PATH` (see [Disable](./disable.md))
+- easily temporarily disable `poof` by removing the directory from your `$PATH`
+  (see [Disable](./disable.md))
 
 :::important
-Be sure it is at the beginning of your `$PATH` so that it takes precedence over any other version of the same binary you may have installed other ways.
+Be sure it is at the beginning of your `$PATH` so that it takes precedence over
+any other version of the same binary you may have installed other ways.
 :::
 
 ## Cache

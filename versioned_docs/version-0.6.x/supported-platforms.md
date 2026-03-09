@@ -4,8 +4,6 @@ title: Supported Platforms
 description: Platforms and architectures supported by poof
 ---
 
-# Supported Platforms
-
 Poof is designed to support most common operating systems and run on a wide range of architectures.
 
 As a rule of thumb, it should run on any Linux or macOS install from the last 10 years.

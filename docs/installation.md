@@ -40,6 +40,36 @@ brew tap pirafrank/tap
 brew install pirafrank/tap/poof
 ```
 
+### Nix and NixOS
+
+:::info
+Since version `0.6.1`.
+:::
+
+A flake is provided to install via Nix package manager or on NixOS:
+
+Install into your Nix profile:
+
+```sh
+nix profile install github:pirafrank/poof/<VERSION>
+# e.g.
+nix profile install github:pirafrank/poof/v0.6.1
+```
+
+Or run without installing:
+
+```sh
+nix run github:pirafrank/poof/v0.6.1 -- version
+nix run github:pirafrank/poof/v0.6.1 -- install someuser/somerepo
+```
+
+**Development shell:**
+
+The flake does not ship a dedicated dev shell. Use the standard Cargo toolchain
+instead. Get more information in the
+[dedicated README](https://github.com/pirafrank/poof/blob/main/nix/README.md)
+in the project repository.
+
 ### Debian/Ubuntu
 
 On Debian and Ubuntu distributions can also install using APT.

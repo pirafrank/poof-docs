@@ -5,8 +5,6 @@ title: Shell Completions
 description: Setup shell completions for poof commands
 ---
 
-# Shell Completions
-
 Generate completions for your shell and source them in your shell configuration.
 
 ## Quick start
