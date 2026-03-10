@@ -86,6 +86,12 @@ poof install <USER>/<REPO> -t <TAG>
 poof list
 ```
 
+or, for a specific repository:
+
+```sh
+poof list <USER>/<REPO>
+```
+
 ### Which repository provides `sometool` in $PATH?
 
 ```sh

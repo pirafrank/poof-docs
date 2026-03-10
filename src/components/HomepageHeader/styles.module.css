@@ -78,12 +78,18 @@
 
 .installCommand {
   margin-top: 2rem;
-  padding: 1rem 3.5rem 1rem 2rem;
+  padding: 1rem 0.75rem 1rem 2rem;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   display: inline-flex;
-  position: relative;
+  align-items: center;
+  gap: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.codeWrapper {
+  overflow-x: auto;
+  min-width: 0;
 }
 
 .installCommand code {
@@ -113,10 +119,7 @@
 }
 
 .copyButton {
-  position: absolute;
-  right: 0.75rem;
-  top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
@@ -132,11 +135,11 @@
 .copyButton:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
 }
 
 .copyButton:active {
-  transform: translateY(-50%) scale(0.95);
+  transform: scale(0.95);
 }
 
 .copyButton svg {
@@ -150,9 +153,8 @@
   }
 
   .installCommand {
-    padding: 0.75rem 3rem 0.75rem 1rem;
-    max-width: 75vw;
-    overflow-x: auto;
+    padding: 0.75rem 0.5rem 0.75rem 1rem;
+    max-width: 70vw;
   }
 
   .installCommand code {
@@ -160,7 +162,6 @@
   }
 
   .copyButton {
-    right: 0.5rem;
     padding: 0.4rem;
   }
 }

@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 
 function InstallCommand() {
   const [copied, setCopied] = useState(false);
-  const installScript = 'curl -fsSL https://raw.githubusercontent.com/pirafrank/poof/main/install.sh | sh';
+  const installScript = 'curl -fsSL https://poof.fpira.com/install.sh | sh';
 
   const handleCopy = async () => {
     try {
@@ -23,7 +23,9 @@ function InstallCommand() {
 
   return (
     <div className={styles.installCommand}>
-      <code>{installScript}</code>
+      <div className={styles.codeWrapper}>
+        <code>{installScript}</code>
+      </div>
       <button
         className={styles.copyButton}
         onClick={handleCopy}

@@ -60,7 +60,7 @@ export default function QuickExample(): ReactNode {
               <h3>Install poof</h3>
             </div>
             <div className={styles.cardCode}>
-              Install via brew, cargo, asdf, and more.
+              Install via brew, APT, DNF, Nix, AUR, ...
             </div>
             <p className={styles.cardDescription}>One command to get started</p>
           </div>

@@ -19,7 +19,7 @@ for more ways to install and deploy `poof`.
 Automatically downloads the right pre-built binary for your OS and architecture.
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/pirafrank/poof/main/install.sh | sh
+curl -fsSL https://poof.fpira.com/install.sh | sh
 ```
 
 It will install `poof` in `${HOME}/.local/bin` on both Linux and macOS.
