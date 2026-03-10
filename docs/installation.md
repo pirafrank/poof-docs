@@ -51,6 +51,9 @@ A flake is provided to install via Nix package manager or on NixOS:
 Install into your Nix profile:
 
 ```sh
+# install latest stable release (recommended)
+nix profile install github:pirafrank/poof/latest
+# or a specific version
 nix profile install github:pirafrank/poof/<VERSION>
 # e.g.
 nix profile install github:pirafrank/poof/v0.6.1
@@ -59,8 +62,8 @@ nix profile install github:pirafrank/poof/v0.6.1
 Or run without installing:
 
 ```sh
-nix run github:pirafrank/poof/v0.6.1 -- version
-nix run github:pirafrank/poof/v0.6.1 -- install someuser/somerepo
+nix run github:pirafrank/poof/latest -- version
+nix run github:pirafrank/poof/latest -- install someuser/somerepo
 ```
 
 **Development shell:**
