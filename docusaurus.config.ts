@@ -87,12 +87,17 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          href: 'https://github.com/pirafrank/poof',
+          label: 'GitHub',
+          position: 'left',
+        },
+        {
           type: 'docsVersionDropdown',
           position: 'right',
         },
         {
-          href: 'https://github.com/pirafrank/poof',
-          label: 'GitHub',
+          href: 'https://github.com/pirafrank/poof/blob/main/CHANGELOG.md',
+          label: 'What\'s New',
           position: 'right',
         },
       ],
@@ -104,16 +109,16 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/installation',
-            },
-            {
               label: 'Features',
               to: '/docs/features',
             },
             {
-              label: 'Contributing',
-              to: '/docs/contribute',
+              label: 'Usage',
+              to: '/docs/usage',
+            },
+            {
+              label: 'Roadmap',
+              to: '/docs/roadmap',
             },
           ],
         },
@@ -128,10 +133,14 @@ const config: Config = {
               label: 'Issues',
               href: 'https://github.com/pirafrank/poof/issues',
             },
+            {
+              label: 'Contributing',
+              to: '/docs/contribute',
+            },
           ],
         },
         {
-          title: 'More',
+          title: 'Code',
           items: [
             {
               label: 'GitHub Repository',
@@ -140,6 +149,10 @@ const config: Config = {
             {
               label: 'Releases',
               href: 'https://github.com/pirafrank/poof/releases',
+            },
+            {
+              label: 'Changelog',
+              href: 'https://github.com/pirafrank/poof/blob/main/CHANGELOG.md',
             },
           ],
         },
