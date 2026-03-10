@@ -14,6 +14,10 @@ for more ways to install and deploy `poof`.
 
 ## Stable Release
 
+:::info
+**What's new?** Check the [changelog](https://github.com/pirafrank/poof/blob/main/CHANGELOG.md)!
+:::
+
 ### Quick one-liner
 
 Automatically downloads the right pre-built binary for your OS and architecture.
@@ -40,6 +44,9 @@ brew tap pirafrank/tap
 brew install pirafrank/tap/poof
 ```
 
+**Note**: Homebrew tap is [automatically updated](https://github.com/pirafrank/homebrew-tap)
+via GitHub Actions.
+
 ### Nix and NixOS
 
 :::info
@@ -53,9 +60,10 @@ Install into your Nix profile:
 ```sh
 # install latest stable release (recommended)
 nix profile install github:pirafrank/poof/latest
+
 # or a specific version
 nix profile install github:pirafrank/poof/<VERSION>
-# e.g.
+# for example:
 nix profile install github:pirafrank/poof/v0.6.1
 ```
 
@@ -210,6 +218,8 @@ cd poof-bin
 makepkg -si
 ```
 
+**Note**: AUR publishing is powered by [AURA](https://github.com/pirafrank/aura).
+
 ### Alpine Linux (APK)
 
 On Alpine Linux you can also install via APK.
@@ -249,27 +259,31 @@ apk update && apk add poof
 
 Install poof using the [asdf version manager](https://asdf-vm.com):
 
-```sh
-# Add the poof plugin
-asdf plugin add poof https://github.com/pirafrank/asdf-poof.git
+1. Add the poof plugin
 
-# Install latest version
+```sh
+asdf plugin add poof https://github.com/pirafrank/asdf-poof.git
+```
+
+2. Install the latest version
+
+```sh
 asdf install poof latest
 ```
 
-On asdf 0.16+ use:
+3. Set as global version:
 
-```sh
-# Set as global version
-asdf set --home poof latest
-```
+  - on asdf 0.16+ use:
 
-On asdf 0.15 and earlier use:
+  ```sh
+  asdf set --home poof latest
+  ```
 
-```sh
-# Set as global version
-asdf global poof latest
-```
+  - on asdf 0.15 and earlier use:
+
+  ```sh
+  asdf global poof latest
+  ```
 
 ### cargo binstall
 
