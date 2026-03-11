@@ -20,6 +20,10 @@ for more ways to install and deploy `poof`.
 
 ### Quick one-liner
 
+:::note
+Always check scripts you pipe to your shell before actually running them!
+:::
+
 Automatically downloads the right pre-built binary for your OS and architecture.
 
 ```sh
@@ -105,6 +109,10 @@ echo "deb [signed-by=/usr/share/keyrings/poof.gpg] https://poof-pkgs.fpira.com/a
   | sudo tee /etc/apt/sources.list.d/poof.list
 sudo apt update && sudo apt install poof
 ```
+
+Verify the fingerprint of the PGP key used to sign packages:
+
+`9B7F 2A31 2F8E 4FEA 8AFC 70EE 65ED 9227 1B84 FFE5`
 
 ### Fedora, RHEL, CentOS, Amazon Linux
 
@@ -194,6 +202,10 @@ sudo yum install poof
 
 </details>
 
+Verify the fingerprint of the PGP key used to sign packages:
+
+`9B7F 2A31 2F8E 4FEA 8AFC 70EE 65ED 9227 1B84 FFE5`
+
 ### Arch Linux (AUR)
 
 Arch Linux users can also install poof from the
@@ -254,6 +266,10 @@ echo "https://poof-pkgs.fpira.com/apk/v${ALPINE_VERSION}" \
   >> /etc/apk/repositories
 apk update && apk add poof
 ```
+
+Verify the fingerprint of the RSA key used to sign packages:
+
+`SHA256:WZS7xVeXcpIb+5Nje9cOWQ2dSTdJuRZtBKpbRamh1uI`
 
 ### asdf
 

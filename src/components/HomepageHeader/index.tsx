@@ -74,6 +74,7 @@ export default function HomepageHeader(): ReactNode {
           </Link>
         </div>
         <InstallCommand />
+        <p style={{ fontSize: '0.8rem', fontStyle: 'italic' }}>Note: Always check scripts you pipe to your shell before actually running them!</p>
       </div>
     </header>
   );
