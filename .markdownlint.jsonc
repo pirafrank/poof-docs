@@ -1,6 +1,10 @@
 {
     // long lines in tables
     "MD013": { "tables": false, "code_blocks": false },
+    // allow inline HTML
+    "MD033": false,
+    // multiple headers with the same content
+    "MD024": false,
     // tables
     "MD060": false
 }

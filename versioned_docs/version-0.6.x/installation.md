@@ -103,9 +103,9 @@ On Debian and Ubuntu distributions can also install using APT.
 - Ubuntu 16.04 (xenial) and newer
 
 ```sh
-curl -fsSL https://poof-pkgs.fpira.com/apt/gpg.pub \
+curl -fsSL https://pkg.fpira.com/apt/gpg.pub \
   | sudo gpg --dearmor -o /usr/share/keyrings/poof.gpg
-echo "deb [signed-by=/usr/share/keyrings/poof.gpg] https://poof-pkgs.fpira.com/apt stable main" \
+echo "deb [signed-by=/usr/share/keyrings/poof.gpg] https://pkg.fpira.com/apt stable main" \
   | sudo tee /etc/apt/sources.list.d/poof.list
 sudo apt update && sudo apt install poof
 ```
@@ -134,14 +134,14 @@ On Red-Hat and Amazon Linux distributions can also install using YUM or DNF.
 <summary>RHEL 9 / CentOS Stream 9 / Fedora 36 and newer</summary>
 
 ```sh
-sudo rpm --import https://poof-pkgs.fpira.com/yum/gpg.pub
-sudo tee /etc/yum.repos.d/poof.repo << EOF
-[poof]
-name=poof
-baseurl=https://poof-pkgs.fpira.com/yum/el9/$(uname -m)/
+sudo rpm --import https://pkg.fpira.com/yum/gpg.pub
+sudo tee /etc/yum.repos.d/pirafrank.repo << EOF
+[pirafrank]
+name=pirafrank
+baseurl=https://pkg.fpira.com/yum/el9/$(uname -m)/
 enabled=1
 gpgcheck=1
-gpgkey=https://poof-pkgs.fpira.com/yum/gpg.pub
+gpgkey=https://pkg.fpira.com/yum/gpg.pub
 EOF
 sudo dnf install poof
 ```
@@ -152,14 +152,14 @@ sudo dnf install poof
 <summary>RHEL 8 / CentOS 8 / CentOS Stream 8 / Fedora 24-35</summary>
 
 ```sh
-sudo rpm --import https://poof-pkgs.fpira.com/yum/gpg.pub
-sudo tee /etc/yum.repos.d/poof.repo << EOF
-[poof]
-name=poof
-baseurl=https://poof-pkgs.fpira.com/yum/el8/$(uname -m)/
+sudo rpm --import https://pkg.fpira.com/yum/gpg.pub
+sudo tee /etc/yum.repos.d/pirafrank.repo << EOF
+[pirafrank]
+name=pirafrank
+baseurl=https://pkg.fpira.com/yum/el8/$(uname -m)/
 enabled=1
 gpgcheck=1
-gpgkey=https://poof-pkgs.fpira.com/yum/gpg.pub
+gpgkey=https://pkg.fpira.com/yum/gpg.pub
 EOF
 sudo dnf install poof
 ```
@@ -170,14 +170,14 @@ sudo dnf install poof
 <summary>Amazon Linux 2023</summary>
 
 ```sh
-sudo rpm --import https://poof-pkgs.fpira.com/yum/gpg.pub
-sudo tee /etc/yum.repos.d/poof.repo << EOF
-[poof]
-name=poof
-baseurl=https://poof-pkgs.fpira.com/yum/amzn2023/$(uname -m)/
+sudo rpm --import https://pkg.fpira.com/yum/gpg.pub
+sudo tee /etc/yum.repos.d/pirafrank.repo << EOF
+[pirafrank]
+name=pirafrank
+baseurl=https://pkg.fpira.com/yum/amzn2023/$(uname -m)/
 enabled=1
 gpgcheck=1
-gpgkey=https://poof-pkgs.fpira.com/yum/gpg.pub
+gpgkey=https://pkg.fpira.com/yum/gpg.pub
 EOF
 sudo dnf install poof
 ```
@@ -188,14 +188,14 @@ sudo dnf install poof
 <summary>Amazon Linux 2</summary>
 
 ```sh
-sudo rpm --import https://poof-pkgs.fpira.com/yum/gpg.pub
-sudo tee /etc/yum.repos.d/poof.repo << EOF
-[poof]
-name=poof
-baseurl=https://poof-pkgs.fpira.com/yum/amzn2/$(uname -m)/
+sudo rpm --import https://pkg.fpira.com/yum/gpg.pub
+sudo tee /etc/yum.repos.d/pirafrank.repo << EOF
+[pirafrank]
+name=pirafrank
+baseurl=https://pkg.fpira.com/yum/amzn2/$(uname -m)/
 enabled=1
 gpgcheck=1
-gpgkey=https://poof-pkgs.fpira.com/yum/gpg.pub
+gpgkey=https://pkg.fpira.com/yum/gpg.pub
 EOF
 sudo yum install poof
 ```
@@ -260,9 +260,9 @@ builds to older Alpine versions.
 
 ```sh
 wget -q -O /etc/apk/keys/signing-key.rsa.pub \
-  https://poof-pkgs.fpira.com/apk/signing-key.rsa.pub
+  https://pkg.fpira.com/apk/signing-key.rsa.pub
 ALPINE_VERSION=$(cat /etc/alpine-release | cut -d. -f1,2)
-echo "https://poof-pkgs.fpira.com/apk/v${ALPINE_VERSION}" \
+echo "https://pkg.fpira.com/apk/v${ALPINE_VERSION}" \
   >> /etc/apk/repositories
 apk update && apk add poof
 ```
