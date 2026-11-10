@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 sidebar_label: Shell Configuration
 title: Configure Your Shell
 description: Guide to configure your shell to use poof

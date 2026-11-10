@@ -1,6 +1,6 @@
 {
     // long lines in tables
-    "MD013": { "tables": false, "code_blocks": false },
+    "MD013": { "tables": false, "code_blocks": false, "line_length": 120 },
     // allow inline HTML
     "MD033": false,
     // multiple headers with the same content

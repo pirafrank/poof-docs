@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'installation',
+        'release-verification',
         'shell-configuration',
         'usage',
       ],
