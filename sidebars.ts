@@ -37,6 +37,7 @@ const sidebars: SidebarsConfig = {
         'rate-limiting',
         'environment-variables',
         'shell-completions',
+        'agent-skill',
         'advanced-usage',
         'debug-logs',
         'disable',
