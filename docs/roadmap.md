@@ -37,7 +37,7 @@ Got a feature request? Open an [issue](https://github.com/pirafrank/poof/labels/
 - ✅ Install via Nix
 - ✅ Install via asdf
 - ⏳ `crossterm`-based terminal output
-- ✅ Hidden `debug` command to show environment info
+- ✅ `info` command to show environment information (replaced the former `debug` command)
 - ✅ Shell integration (via `enable` command)
 - ⏳ Support providers other than GitHub
   - ⏳ GitLab.com
@@ -54,7 +54,7 @@ Got a feature request? Open an [issue](https://github.com/pirafrank/poof/labels/
 ## Commands
 
 - ✅ `help` - show help information about poof
-- ✅ `enable` - add poof's bin directory to `$PATH` in `~/.bashrc` or `~/.zshrc`
+- ✅ `enable` - add poof's bin directory to `$PATH` using the selected shell's startup configuration
 - ✅ `download` - only download the binary for current platform to current directory
 - ✅ `install` - download the binary for current platform and install to poof's
   bin directory
@@ -62,7 +62,7 @@ Got a feature request? Open an [issue](https://github.com/pirafrank/poof/labels/
 - ✅ `list USER/REPO` - list all installed binaries for a given repository
 - ✅ `use` - make an installed version the one to be used by default
 - ✅ `which` - show which repository provides a binar
-- ✅ `what` - list all binaries provided by the latest version of a repository
+- ✅ `what` - list all binaries provided by the highest-sorting installed version of a repository
 - ✅ `update USER/REPO` - update an installed binary to the latest version
 - ✅ `update --all` - update all installed binaries to their latest versions
 - ✅ `unlink BINARY` - remove binary from `$PATH`. Use 'poof use' to re-add it
@@ -82,5 +82,5 @@ Got a feature request? Open an [issue](https://github.com/pirafrank/poof/labels/
 - ⏳ `hold` - disable updates for an app
 - ⏳ `unhold` - re-enable updates for an app
 - ✅ Support for `--help` flag for all commands
-- ✅ Increasing logging verbosity to sysout via `-v...` flags
+- ✅ Configure logging verbosity with the `RUST_LOG` environment variable
 - ⏳ Support shortened versions of commands (e.g. `poof i` for `poof install`)

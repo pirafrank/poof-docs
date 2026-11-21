@@ -60,7 +60,7 @@ Poof automatically detects your system configuration and selects the right binar
 - **Fuzzy matching**: Catches typos in repository names and suggests corrections
 - **Asset filtering**: Prioritizes your exact platform over generic releases
 - **Automatic extraction**: Handles nested binaries from complex archive structures
-- **Checksum filtering**: Automatically excludes checksum files (.sha256, .sha1, .md5) from installation
+- **Checksum and signature filtering**: Excludes checksum and signature files from asset selection.
 
 ### 📦 Comprehensive Archive Support
 

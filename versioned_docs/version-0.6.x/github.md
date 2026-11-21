@@ -52,7 +52,7 @@ Bootstrap `poof` and install one or more tools at once:
 | Input | Description | Default |
 |-------|-------------|---------|
 | `packages` | Newline or comma-separated list of `USERNAME/REPO` (or `USERNAME/REPO@TAG`) entries to install. Leave empty to skip package installation. | - |
-| `version` | Version of `poof` to bootstrap (e.g. `v0.6.0`). Use `latest` to always install the most recent release (recommended). | `latest` |
+| `version` | Version of `poof` to bootstrap (e.g. `v0.6.0`). `latest` installs the most recent release when poof is absent and otherwise reuses the existing installation. An explicit version accepts an optional `v` prefix. | `latest` |
 | `token` | GitHub token used for API requests inside poof to avoid rate limiting. | `${{ github.token }}` |
 
 ## Package format
@@ -93,8 +93,12 @@ a different token via the `token` input.
 3. If `packages` is set, iterates over each entry and runs
    `poof install USER/REPO [--tag TAG]`.
 
-The action is idempotent: if `poof` is already present in the install directory
-it skips re-downloading it.
+With `latest`, the action reuses an existing poof installation in the install directory.
+With an explicit version, it reuses the installation only when that version matches;
+otherwise it installs the requested version.
+
+The ref in `uses: pirafrank/poof@...` selects the Action code, while the `version`
+input selects the poof binary. Pin both for reproducible workflows.
 
 ## Supported platforms
 

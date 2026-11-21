@@ -4,7 +4,7 @@ title: Release verification
 description: Verify poof releases using checksums and attestations
 ---
 
-Since poof `v0.6.3`, every stable release archive has GitHub provenance and SPDX SBOM attestations.
+For poof `v0.6.4`, every stable release archive has GitHub provenance and SPDX SBOM attestations.
 Releases also publish one build-environment JSON record per archive and a canonical aggregate
 checksum manifest, signed using Cosign keyless signing with GitHub Actions OIDC. Archive checksums
 are published in this manifest; individual `.sha256` sidecars are not published.
@@ -12,14 +12,14 @@ are published in this manifest; individual `.sha256` sidecars are not published.
 ## Verify signatures and checksums
 
 Download the checksum manifest, its `.sigstore.json` bundle, and the assets you need from the
-same release. Use a current Cosign version (CI pins `v3.1.4`). For example, for `v0.6.3`:
+same release. Use a current Cosign version (CI pins `v3.1.4`). For example, for `v0.6.4`:
 
 ```sh
-cosign verify-blob poof-0.6.3-checksums.txt \
-  --bundle poof-0.6.3-checksums.txt.sigstore.json \
-  --certificate-identity 'https://github.com/pirafrank/poof/.github/workflows/release.yml@refs/tags/v0.6.3' \
+cosign verify-blob poof-0.6.4-checksums.txt \
+  --bundle poof-0.6.4-checksums.txt.sigstore.json \
+  --certificate-identity 'https://github.com/pirafrank/poof/.github/workflows/release.yml@refs/tags/v0.6.4' \
   --certificate-oidc-issuer 'https://token.actions.githubusercontent.com'
-sha256sum --check poof-0.6.3-checksums.txt
+sha256sum --check poof-0.6.4-checksums.txt
 ```
 
 Run the checksum command from the assets directory. It requires all listed files. For a wrapper
@@ -35,17 +35,17 @@ branch runs do not satisfy the release-tag identity shown above.
 ## Verify GitHub attestations
 
 To check SLSA provenance and SPDX GitHub attestations for an archive, for example
-`poof-0.6.3-x86_64-unknown-linux-musl.tar.gz`:
+`poof-0.6.4-x86_64-unknown-linux-musl.tar.gz`:
 
 ```sh
-gh attestation verify poof-0.6.3-x86_64-unknown-linux-musl.tar.gz \
+gh attestation verify poof-0.6.4-x86_64-unknown-linux-musl.tar.gz \
   --repo pirafrank/poof \
   --signer-workflow pirafrank/poof/.github/workflows/release.yml \
-  --source-ref refs/tags/v0.6.3
-gh attestation verify poof-0.6.3-x86_64-unknown-linux-musl.tar.gz \
+  --source-ref refs/tags/v0.6.4
+gh attestation verify poof-0.6.4-x86_64-unknown-linux-musl.tar.gz \
   --repo pirafrank/poof \
   --signer-workflow pirafrank/poof/.github/workflows/release.yml \
-  --source-ref refs/tags/v0.6.3 --predicate-type https://spdx.dev/Document/v2.3
+  --source-ref refs/tags/v0.6.4 --predicate-type https://spdx.dev/Document/v2.3
 ```
 
 ## Build-environment schema version 1

@@ -36,7 +36,7 @@ Commands:
   install      Download binary for the platform and install it
   list         List all installed binaries and their versions
   which        Show which repository provides a binary
-  what         List all binaries provided by the latest version of a repository
+  what         List all binaries provided by the highest-sorting installed version of a repository
   use          Set an installed version of a slug as the default one
   update       Update installed binaries of a slug or all installed binaries to their latest versions
   unlink       Remove binary from PATH. Use 'poof use' to re-add it
@@ -51,10 +51,10 @@ Commands:
   help         Print this message or the help of the given subcommand(s)
 
 Options:
-  -v, --verbose...  Increase logging verbosity
-  -q, --quiet...    Decrease logging verbosity
   -h, --help        Print help
   -V, --version     Print version
+
+Set logging verbosity with `RUST_LOG` (for example, `RUST_LOG=debug poof install owner/repo`). See [Debug Logs](./debug-logs.md) for details.
 
 For more information, visit: https://github.com/pirafrank/poof
 

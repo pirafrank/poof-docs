@@ -22,8 +22,19 @@
         "rate-limiting",
         "environment-variables",
         "shell-completions",
+        "agent-skill",
         "advanced-usage",
         "disable"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Troubleshooting",
+      "collapsed": false,
+      "items": [
+        "troubleshooting",
+        "debug-logs",
+        "npm-troubleshooting"
       ]
     },
     {
@@ -33,6 +44,8 @@
       "items": [
         "github",
         "gitlab",
+        "azure-devops-extension",
+        "azure-devops-template",
         "scripting"
       ]
     },

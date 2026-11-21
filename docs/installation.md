@@ -271,6 +271,39 @@ Verify the fingerprint of the RSA key used to sign packages:
 
 `SHA256:WZS7xVeXcpIb+5Nje9cOWQ2dSTdJuRZtBKpbRamh1uI`
 
+### npm
+
+Install the [`@pirafrank/poof` launcher on npmjs](https://www.npmjs.com/package/@pirafrank/poof) globally (Node.js 18 or newer):
+
+```sh
+npm install --global @pirafrank/poof
+```
+
+For one-off use, run:
+
+```sh
+npx --yes @pirafrank/poof --help
+```
+
+For a project-local install, use:
+
+```sh
+npm install --save-dev @pirafrank/poof
+```
+
+Supported npm targets are Linux x64 and arm64, and macOS x64 (Intel) and arm64 (Apple silicon). Linux packages contain static musl builds, which also run on glibc systems. Node.js 18 or newer is required to install and run poof through npm.
+See [npm troubleshooting](./npm-troubleshooting.md) if installation or launch fails.
+
+Every release is built by GitHub Actions from a tagged commit, signed with Sigstore, and
+published with npm provenance. You can inspect the provenance of an installed version with:
+
+```sh
+npm audit signatures
+```
+
+Native release archives, checksums, SPDX inventories, and attestations are published on the
+[GitHub Releases page](https://github.com/pirafrank/poof/releases).
+
 ### asdf
 
 Install poof using the [asdf version manager](https://asdf-vm.com):

@@ -1,5 +1,4 @@
 ---
-sidebar_position: 7
 sidebar_label: Debug Logs
 title: Debug Logs
 description: Using debug logging to troubleshoot poof issues
@@ -133,6 +132,7 @@ Then attach `debug.log` when creating your GitHub issue.
 
 ## Related Documentation
 
+- [Troubleshooting](./troubleshooting.md) - Common problems and first steps
 - [Environment Variables](./environment-variables.md) - All available environment variables
 - [Advanced Usage](./advanced-usage.md) - Troubleshooting guide
 - [Support](./support.md) - Get help and report issues

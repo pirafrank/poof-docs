@@ -23,4 +23,11 @@ for the project
 `main` is the go-to branch to target PRs.
 
 You may enable git hooks with `just install-hooks` to automatically run checks
-before pushing code. Thank you.
+before pushing code.
+
+Thank you.
+
+## Development guide
+
+Read the [Development Guide](https://github.com/pirafrank/poof/blob/main/docs/development-guide.md) for
+detailed instructions on setting up the development environment, building, testing, and more.

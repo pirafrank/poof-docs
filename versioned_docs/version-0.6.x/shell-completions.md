@@ -19,8 +19,8 @@ Replace `<shell>` with one of the supported shells:
 - `zsh`
 - `fish`
 - `elvish`
-- `nushell`
-- `powershell`
+- `nushell` (or `nu`)
+- `powershell` (or `pwsh`)
 - `xonsh`
 
 ## Supported Shells

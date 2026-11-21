@@ -13,48 +13,27 @@ Understanding how poof selects the right asset can help you predict behavior and
 
 ### Scoring System
 
-Poof uses a point-based scoring algorithm to evaluate each asset in a release:
+Poof scores each filename in stages. Rejected assets receive no positive score. The selector
+returns every asset tied at the highest positive score; it does not choose a single winner.
+The table shows the scoring order. Later rows apply only when earlier filename branches did
+not match. OS and architecture bonuses are cumulative with the filename branch and Linux
+fallbacks.
 
-| Criteria | Points | Description |
-|----------|--------|-------------|
-| **OS match** | +1 | Asset name contains your OS (linux, darwin, etc.) |
-| **Architecture match** | +1 | Asset name contains your architecture |
-| **Musl preference met** | +1 | Contains "musl" when you prefer musl |
-| **Musl when glibc preferred** | -1 | Contains "musl" when you have/prefer glibc |
-| **Non-archived executable** | +1 | File has no extension (raw binary) |
-| **Exact arch match at end** | +1 | Filename ends with exact architecture string |
-| **Wrong OS** | -1 (deal-breaker) | Asset is for a different operating system |
-| **Wrong architecture** | -1 (deal-breaker) | Asset is for a different CPU architecture |
-| **Unsupported format** | -1 (deal-breaker) | Archive format not supported by poof |
-| **Checksum file** | -1 (deal-breaker) | File is a checksum (.sha256, .sha1, .md5) |
+| Stage | Score or effect | Condition |
+|-------|-----------------|-----------|
+| Linux libc preference | +2 for a musl asset when musl is preferred; -2 for a musl asset when glibc is preferred | Linux only; applied before platform checks |
+| OS match | +5 | Filename contains a recognized current-OS alias |
+| Architecture match | +5 plus the number of aliases from the matched alias onward | Earlier aliases in the architecture table rank higher |
+| Bare executable | +6 | No dot in filename, or dotted filename with no recognized short extension and both OS and architecture matched; at least one platform signal is required |
+| Architecture suffix | +2 | Earlier filename branch did not match and filename ends with the matched architecture alias |
+| OS suffix | +2 | Earlier branches did not match and filename ends with the matched OS alias |
+| Supported archive | +5 | Earlier filename branches did not match and filename has a supported extension |
+| Missing platform label fallback | +1 each | OS missing on Linux; architecture missing on x86_64 |
+| Incompatible platform or unsupported asset | Rejected | Includes known unsupported OS/architecture labels, a different supported OS/architecture without a matching target label, and unsupported formats |
 
-The asset with the highest score is selected. If multiple assets have the same score, poof picks the first one.
-
-### Example Scenario
-
-On Linux x86_64 with glibc, evaluating these assets:
-
-```text
-1. ripgrep-13.0.0-x86_64-unknown-linux-gnu.tar.gz
-   - OS match (linux): +1
-   - Arch match (x86_64): +1
-   - Has extension: 0
-   - Score: 2
-
-2. ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
-   - OS match (linux): +1
-   - Arch match (x86_64): +1
-   - Musl when glibc preferred: -1
-   - Has extension: 0
-   - Score: 1
-
-3. ripgrep-13.0.0-aarch64-unknown-linux-gnu.tar.gz
-   - OS match (linux): +1
-   - Wrong arch: -1 (deal-breaker)
-   - Score: -1 (rejected)
-
-Selected: ripgrep-13.0.0-x86_64-unknown-linux-gnu.tar.gz (score: 2)
-```
+Checksum and signature assets are filtered separately. A dotted bare executable needs both
+OS and architecture labels to receive the bare-executable bonus. These conditions mean the
+scores are not a flat sum of every matching row: the filename rows are mutually exclusive.
 
 ### Influencing Asset Selection
 
@@ -62,7 +41,7 @@ You can influence which asset gets selected:
 
 1. **Set `POOF_PREFER_MUSL=1`** to prefer static musl builds
 2. Use the `--tag` flag to select a specific release version
-3. Understand that poof always prefers exact platform matches
+3. Check the asset names and supported platform aliases when troubleshooting a match
 
 ## Platform Detection Details
 
@@ -71,10 +50,10 @@ You can influence which asset gets selected:
 Poof recognizes multiple naming conventions for operating systems:
 
 - **macOS**: `macos`, `darwin`, `mac`, `osx`
-- **Linux**: `linux`
-- **Windows**: `windows`, `win` (not officially supported)
+- **Linux**: `linux`, `musllinux`
 
-Assets containing any of these aliases will match the respective platform.
+Known unsupported OS labels, including `windows` and `win`, are rejected. Matching
+uses complete alias tokens rather than arbitrary substrings.
 
 ### CPU Architecture Aliases
 
@@ -93,7 +72,7 @@ Poof supports comprehensive architecture alias matching:
 | **loongarch64** | `loongarch64` |
 
 :::note ARM Hierarchy
-For ARM, the order matters: `armv7l` → `armhf` → `armv7` → `armv6` → `arm` (from specific to general). Assets with "arm" in the name will match armv7 builds for backward compatibility.
+For ARM, the order matters: `armv7l` → `armv7` → `armhf` → `armv6` → `arm` (from specific to general). Assets with "arm" in the name will match armv7 builds for backward compatibility.
 :::
 
 ### Special Architecture Handling
@@ -158,19 +137,19 @@ warn: A binary named 'rg' already exists in PATH
 
 ## Binary Name Normalization
 
-When extracting binaries from archives, poof applies intelligent name normalization:
+Poof removes recognized platform and release-version decorations while preserving
+meaningful command variants. For example, a bare asset named
+`cosign-linux-pivkey-pkcs11key-amd64` becomes `cosign-pivkey-pkcs11key`.
 
-### Separator Trimming
+Release asset names use the first dot-separated component after known release
+versions are removed. For example, `mc.linux-amd64.RELEASE.…` becomes `mc`.
+Executable names inside archives retain meaningful dots and punctuation, such as
+`python3.13` and `clang++`. Archive packaging labels do not rename internal
+commands; meaningful variant suffixes can be retained, as in `zellij-no-web`.
 
-Poof trims filenames at the first separator (`.`, `_`, `-`) to get clean binary names:
-
-```txt
-ripgrep-13.0.0-x86_64-unknown-linux-musl → ripgrep
-fd_8.7.0_amd64.deb → fd
-bat.exe → bat
-```
-
-**Why:** Ensures consistent binary names regardless of how releases are packaged.
+If multiple commands from the same release still have the same name after cleanup,
+poof keeps the first and reports the skipped duplicates. Previously misnamed
+installations need to be removed and reinstalled explicitly.
 
 ## Security Features
 
@@ -190,15 +169,10 @@ Poof validates archives using magic bytes (file signatures), not just extensions
 
 **Benefit:** Prevents issues when files have incorrect extensions or are corrupted.
 
-### Checksum File Filtering
+### Checksum and Signature Filtering
 
-Poof automatically excludes checksum files from asset selection:
-
-- `.sha256` files
-- `.sha1` files
-- `.md5` files
-
-**Why:** Prevents accidentally "installing" a checksum file as if it were a binary.
+Poof excludes checksum and signature files from asset selection so they are not mistaken
+for installable binaries.
 
 ## Performance Features
 

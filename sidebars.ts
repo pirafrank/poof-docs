@@ -37,9 +37,19 @@ const sidebars: SidebarsConfig = {
         'rate-limiting',
         'environment-variables',
         'shell-completions',
+        'agent-skill',
         'advanced-usage',
-        'debug-logs',
         'disable',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      collapsed: false,
+      items: [
+        'troubleshooting',
+        'debug-logs',
+        'npm-troubleshooting'
       ],
     },
     {
@@ -49,6 +59,8 @@ const sidebars: SidebarsConfig = {
       "items": [
         "github",
         "gitlab",
+        "azure-devops-extension",
+        "azure-devops-template",
         "scripting"
       ]
     },
@@ -83,6 +95,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'contribute',
         'development-guide',
+        'distribution-channels',
       ],
     },
   ],

@@ -21,7 +21,7 @@ Later you can re-add it via the `use` command:
 poof use someuser/sometool
 ```
 
-`use` command picks newest installed version if no version is given.
+`use` command picks the highest semantic version among installed versions if no version is given.
 
 ## Remove poof `bin` directory from $PATH
 

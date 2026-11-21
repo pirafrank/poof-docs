@@ -6,6 +6,9 @@ description: How to get help and report issues
 
 ## Bug Reports
 
+Check the [Troubleshooting](./troubleshooting.md) guide for common problems and
+diagnostic steps before opening an issue.
+
 If you encounter any issues not covered above, please [report them](https://github.com/pirafrank/poof/issues/new/choose) by opening an issue.
 
 **When reporting bugs, please include:**
