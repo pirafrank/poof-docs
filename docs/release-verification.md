@@ -4,7 +4,7 @@ title: Release verification
 description: Verify poof releases using checksums and attestations
 ---
 
-For poof `v0.6.4`, every stable release archive has GitHub provenance and SPDX SBOM attestations.
+Starting with poof `v0.6.3`, every stable release archive has GitHub provenance and SPDX SBOM attestations.
 Releases also publish one build-environment JSON record per archive and a canonical aggregate
 checksum manifest, signed using Cosign keyless signing with GitHub Actions OIDC. Archive checksums
 are published in this manifest; individual `.sha256` sidecars are not published.
